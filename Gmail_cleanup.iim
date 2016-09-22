@@ -1,0 +1,19 @@
+'Login to gmail manually first and run this macros for cleanup
+
+' Delete Trash forever
+URL GOTO=https://mail.google.com/mail/u/0/#inbox
+TAG POS=1 TYPE=IMG ATTR=SRC:https://ssl.gstatic.com/ui/v1/icons/mail/images/cleardot.gif
+TAG POS=1 TYPE=A ATTR=TXT:Inbox<SP>(5,848)
+TAG POS=182 TYPE=DIV ATTR=TXT:
+
+'cleanup all promotional mails
+URL GOTO=https://mail.google.com/mail/u/0/#inbox
+TAG POS=1 TYPE=A ATTR=TXT:Inbox<SP>(5,861)
+TAG POS=269 TYPE=DIV ATTR=TXT:
+TAG POS=6 TYPE=DIV ATTR=TXT:All
+TAG POS=1 TYPE=INPUT:TEXT FORM=ID:gbqf ATTR=ID:gbqfq CONTENT=category:promotions
+TAG POS=1 TYPE=BUTTON FORM=ID:gbqf ATTR=ID:gbqfb
+TAG POS=3 TYPE=DIV ATTR=CLASS:T-Jo-auh&&ROLE:presentation&&TXT:
+TAG POS=1 TYPE=SPAN ATTR=ID::2vf
+TAG POS=3 TYPE=DIV ATTR=CLASS:ar9<SP>T-I-J3<SP>J-J5-Ji&&TXT:
+TAG POS=3 TYPE=BUTTON ATTR=NAME:ok
